@@ -26,7 +26,7 @@ var mailObj = {
 var ExcelObj = {
 	exportFile:function(t){
 		var header = ["日期","姓名","序号","发起人","邮件主题","处理状态","备注"];
-		var data = mailObj.getMails();
+		var data = mailObj.getMails(t);
 		var FileName = "邮件数据采集_"+name;
         this.JSONToExcelConvertor(header, data,FileName);
 	},
