@@ -13,7 +13,12 @@ var mailObj = {
 			var jtitle = $(lis[i]).find(".subject").html().replace(/\s/g,"");
 			var jfrom = $(lis[i]).find(".from").html().replace(/\s/g,"");
 			var monthDay = $(lis[i]).find(".desc-time").html().replace(/\s/g,"");
-			var obj = [nowYear+"-"+monthDay,name,lis.length-i,jfrom,jtitle,"无需处理",""];
+			var obj = "";
+			if(t == 'today'){
+				obj = [date,name,lis.length-i,jfrom,jtitle,"无需处理",""];
+			}else{
+				obj = [nowYear+"-"+monthDay,name,lis.length-i,jfrom,jtitle,"无需处理",""];
+			}
 			mailJsons.unshift(obj);
 		}
 		return mailJsons;
