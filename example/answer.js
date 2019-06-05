@@ -249,6 +249,10 @@ var dxCount = parseInt($("#divPrintArea").find(".examitem")[0].children.length-1
 var duoxCount = parseInt($("#divPrintArea").find(".examitem")[1].children.length-1,10);
 var pdCount = parseInt($("#divPrintArea").find(".examitem")[2].children.length-1,10);
 
+dxCount = 8;
+duoxCount = 16;
+pdCount = 10;
+
 FormOp.addDx(dxCount+duoxCount+pdCount,dxCount+duoxCount,dxCount);
 
 var UserExamID = GetQueryString("UserExamID");
