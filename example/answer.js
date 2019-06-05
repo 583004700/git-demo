@@ -95,7 +95,7 @@ Dx.prototype = {
             }else if(arr[ii]){
                 ind = 8;
             }
-            var daStr = $($("#divPrintArea").find(".examcontent")[this.xh]).find(".licontent")[ind].innerHTML.replace(/\s/g,"");
+            var daStr = $($(".exam-subject-box")[this.xh]).find(".pl30").eq(ind).find("div").html().replace(/\s/g, "");
             var obj = '{"title":"'+this.getTitle()+'","daStr":"'+daStr+'"}';
             objStrArr.push(obj);
         }
@@ -108,8 +108,8 @@ function Pd(xh,duoxCount){
     this.duoxCount = duoxCount;
 }
 Pd.prototype = {
-    __proto__:XXSelect.prototype/*,
-    getDa:function(){
+    __proto__:XXSelect.prototype,
+    /*getDa:function(){
         var iStr = this.xh-this.duoxCount+1;
         if(iStr<10){
             iStr = "0"+iStr;
@@ -117,7 +117,7 @@ Pd.prototype = {
         var da = $("#repJudgeQuestion_ctl"+iStr+"_lblCorrectAnswers")[0].innerHTML.replace(/\s/g,"");
         this.da = da;
         return this.da;
-    },
+    },*/
     getDaobjStrArr:function(){
         var ind = 1000;
 
@@ -130,12 +130,12 @@ Pd.prototype = {
             }else if(arr[ii] == "B"){
                 ind = 2;
             }
-            var daStr = $($($("#divPrintArea").find(".examcontent")[this.xh]).find(".examrow")[ind]).find("div")[1].innerHTML.replace(/\s/g,"");
+            var daStr = $($(".exam-subject-box")[this.xh]).find(".pl30").eq(ind).find("div").html().replace(/\s/g, "");
             var obj = '{"title":"'+this.getTitle()+'","daStr":"'+daStr+'"}';
             objStrArr.push(obj);
         }
         return objStrArr;
-    }*/
+    }
 }
 
 function GetQueryString(name)
