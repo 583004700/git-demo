@@ -11,7 +11,7 @@ XXSelect.prototype = {
     da:"",
     //通过序号得到题目的标题,默认使用单选方式
     getTitle:function(){
-        var title = $($("#divPrintArea").find(".examcontent")[this.xh]).find("div:eq(2)")[0].innerHTML.replace(/\s/g,"");
+        var title = $($(".exam-subject-box")[this.xh]).find(".exam-vignette-con").html().replace(/\s/g,"");
         this.title = title;
         return this.title;
     },
