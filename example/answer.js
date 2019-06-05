@@ -61,8 +61,8 @@ function Dx(xh,dxCount){
     this.dxCount = dxCount;
 }
 Dx.prototype = {
-    __proto__:XXSelect.prototype/*,
-    getDa:function(){
+    __proto__:XXSelect.prototype,
+    /*getDa:function(){
         var iStr = this.xh-this.dxCount+1;
         if(iStr<10){
             iStr = "0"+iStr;
@@ -70,7 +70,7 @@ Dx.prototype = {
         var da = $("#repMultiQuestion_ctl"+iStr+"_lblCorrectAnswers")[0].innerHTML.replace(/\s/g,"");
         this.da = da;
         return this.da;
-    },
+    },*/
     getDaobjStrArr:function(){
         var ind = 1000;
 
@@ -100,7 +100,7 @@ Dx.prototype = {
             objStrArr.push(obj);
         }
         return objStrArr;
-    }*/
+    }
 }
 //判断题，总数量，多选数量
 function Pd(xh,duoxCount){
