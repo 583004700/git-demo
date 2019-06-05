@@ -44,7 +44,7 @@ XXSelect.prototype = {
             ind = 7;
         }
         try {
-            var daStr = $($("#divPrintArea").find(".examcontent")[this.xh]).find(".licontent")[ind].innerHTML.replace(/\s/g, "");
+            var daStr = $($(".exam-subject-box")[this.xh]).find(".pl30").eq(ind).find("div").html().replace(/\s/g, "");
         }catch (e){
             alert(ind);
             alert(this.xh);
@@ -61,7 +61,7 @@ function Dx(xh,dxCount){
     this.dxCount = dxCount;
 }
 Dx.prototype = {
-    __proto__:XXSelect.prototype,
+    __proto__:XXSelect.prototype/*,
     getDa:function(){
         var iStr = this.xh-this.dxCount+1;
         if(iStr<10){
@@ -100,7 +100,7 @@ Dx.prototype = {
             objStrArr.push(obj);
         }
         return objStrArr;
-    }
+    }*/
 }
 //判断题，总数量，多选数量
 function Pd(xh,duoxCount){
@@ -108,7 +108,7 @@ function Pd(xh,duoxCount){
     this.duoxCount = duoxCount;
 }
 Pd.prototype = {
-    __proto__:XXSelect.prototype,
+    __proto__:XXSelect.prototype/*,
     getDa:function(){
         var iStr = this.xh-this.duoxCount+1;
         if(iStr<10){
@@ -135,7 +135,7 @@ Pd.prototype = {
             objStrArr.push(obj);
         }
         return objStrArr;
-    }
+    }*/
 }
 
 function GetQueryString(name)
