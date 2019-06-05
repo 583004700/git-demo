@@ -245,13 +245,13 @@ var FormOp = {
 }
 //单选和多选共?题，而单选?题
 
-var dxCount = parseInt($("#divPrintArea").find(".examitem")[0].children.length-1,10);
-var duoxCount = parseInt($("#divPrintArea").find(".examitem")[1].children.length-1,10);
-var pdCount = parseInt($("#divPrintArea").find(".examitem")[2].children.length-1,10);
+//var dxCount = parseInt($("#divPrintArea").find(".examitem")[0].children.length-1,10);
+//var duoxCount = parseInt($("#divPrintArea").find(".examitem")[1].children.length-1,10);
+//var pdCount = parseInt($("#divPrintArea").find(".examitem")[2].children.length-1,10);
 
-dxCount = 8;
-duoxCount = 16;
-pdCount = 10;
+var dxCount = 8;
+var duoxCount = 16;
+var pdCount = 10;
 
 FormOp.addDx(dxCount+duoxCount+pdCount,dxCount+duoxCount,dxCount);
 
