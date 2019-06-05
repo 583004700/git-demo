@@ -44,7 +44,7 @@ XXSelect.prototype = {
             ind = 7;
         }
         try {
-            var daStr = $($(".exam-subject-box")[this.xh]).find(".pl30").eq(ind).find("div").html().replace(/\s/g, "");
+            var daStr = $($(".exam-subject-box")[this.xh]).find(".pl30").eq(ind-1).find("div").html().replace(/\s/g, "");
         }catch (e){
             alert(ind);
             alert(this.xh);
@@ -95,7 +95,7 @@ Dx.prototype = {
             }else if(arr[ii]){
                 ind = 8;
             }
-            var daStr = $($(".exam-subject-box")[this.xh]).find(".pl30").eq(ind).find("div").html().replace(/\s/g, "");
+            var daStr = $($(".exam-subject-box")[this.xh]).find(".pl30").eq(ind-1).find("div").html().replace(/\s/g, "");
             var obj = '{"title":"'+this.getTitle()+'","daStr":"'+daStr+'"}';
             objStrArr.push(obj);
         }
@@ -130,7 +130,7 @@ Pd.prototype = {
             }else if(arr[ii] == "B"){
                 ind = 2;
             }
-            var daStr = $($(".exam-subject-box")[this.xh]).find(".pl30").eq(ind).find("div").html().replace(/\s/g, "");
+            var daStr = $($(".exam-subject-box")[this.xh]).find(".pl30").eq(ind-1).find("div").html().replace(/\s/g, "");
             var obj = '{"title":"'+this.getTitle()+'","daStr":"'+daStr+'"}';
             objStrArr.push(obj);
         }
