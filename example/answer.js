@@ -255,7 +255,7 @@ var pdCount = 10;
 
 FormOp.addDx(dxCount+duoxCount+pdCount,dxCount+duoxCount,dxCount);
 
-var UserExamID = GetQueryString("UserExamID");
-var sjName = $("#divPrintArea").find("div:eq(3)").find("span:eq(0)").html().replace(/\s/g,"");
+var UserExamID = GetQueryString("userexamid");
+var sjName = $("#lblExamName").html().replace(/\s/g,"");
 console.log(daArr.toString());
 console.log('{"UserExamID":"'+UserExamID+'","sjName":"'+sjName+'"}');
