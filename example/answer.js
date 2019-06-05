@@ -21,7 +21,7 @@ XXSelect.prototype = {
         if(iStr<10){
             iStr = "0"+iStr;
         }
-        var da = $("#repSingleQuestion_ctl"+iStr+"_lblCorrectAnswers")[0].innerHTML.replace(/\s/g,"");
+        var da = $($(".exam-subject-box")[this.xh]).find(".ml50").text().split("：")[1].replace(/\s/g,"");
         this.da = da;
         return this.da;
     },
